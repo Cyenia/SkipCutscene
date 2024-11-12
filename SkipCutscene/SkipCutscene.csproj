@@ -3,7 +3,7 @@
     <Name>SkipCutscene</Name>
     <Punchline>Skip Cutscene</Punchline>
     <Authors>KangasZ</Authors>
-    <Version>3.0.0.0</Version>
+    <Version>3.0.1.0</Version>
     <RootNamespace>SkipCutscene</RootNamespace>
     <Copyright>MIT</Copyright>
   </PropertyGroup>
@@ -27,7 +27,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DalamudPackager" Version="2.1.13" />
+    <PackageReference Include="DalamudPackager" Version="11.0.0" />
     <Reference Include="FFXIVClientStructs">
       <HintPath>$(DalamudLibPath)FFXIVClientStructs.dll</HintPath>
       <Private>false</Private>
