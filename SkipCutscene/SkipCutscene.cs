@@ -22,7 +22,7 @@ public class SkipCutscene : IDalamudPlugin
 
         _config = configuration;
 
-        Address.Offset1 = SigScanner.ScanText("75 33 48 8B 0D ?? ?? ?? ?? BA ?? 00 00 00 48 83 C1 10 E8 ?? ?? ?? ?? 83 78");
+        Address.Offset1 = SigScanner.ScanText("75 ?? 48 8b 0d ?? ?? ?? ?? ba ?? 00 00 00 48 83 c1 10 e8 ?? ?? ?? ?? 83 78 ?? ?? 74");
         Address.Offset2 = SigScanner.ScanText("74 18 8B D7 48 8D 0D");
         PluginLog.Information(
             "Offset1: [\"ffxiv_dx11.exe\"+{0}]",
@@ -81,7 +81,7 @@ public class SkipCutscene : IDalamudPlugin
         }
         else
         {
-            SafeMemory.Write<short>(Address.Offset1, 13173);
+            SafeMemory.Write<short>(Address.Offset1, 14709);
             SafeMemory.Write<short>(Address.Offset2, 6260);
         }
     }
