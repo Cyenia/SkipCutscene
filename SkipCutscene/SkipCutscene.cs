@@ -12,7 +12,7 @@ namespace SkipCutscene;
 public class SkipCutscene : IDalamudPlugin
 {
     private readonly Config _config;
-    private readonly ushort[] _msqTerritoryTypeIds = [1043,1044,1048];
+    private readonly uint[] _msqTerritoryTypeIds = [1043,1044,1048];
 
     private readonly decimal _base = uint.MaxValue;
 
@@ -89,7 +89,7 @@ public class SkipCutscene : IDalamudPlugin
         }
     }
 
-    private void OnTerritoryChanged(ushort territoryType)
+    private void OnTerritoryChanged(uint territoryType)
     {
         if (_msqTerritoryTypeIds.Contains(territoryType) && _config.IsEnabled)
             SetEnabled(true);
